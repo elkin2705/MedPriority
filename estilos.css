@@ -780,8 +780,9 @@ body {
     .con_formulario_final1 {
         display: block;
         width: 100%;
- 
+
      padding-left: 18%;
+    
 
     }
 
@@ -806,12 +807,9 @@ body {
         width: 70%;
     }
 
-    .pregunt_5 {
-        width: 50%;
-    }
-
+   
     .separacionbotton {
-        height: 70%;
+        height: 100%;
     }
 
     .con_formulario3 {
@@ -862,7 +860,9 @@ body {
    
     .con_final {
         width: 100%;
+        height: 100%;
         margin-bottom: 10px;
+        
     }
 
     .mensaje{
@@ -878,6 +878,7 @@ body {
         display: flex;
         flex-direction: column;
         align-items: center;
+       height: 200%;
     }
 
     .con_final .pregunt_5 {
@@ -892,7 +893,4 @@ input, select, button {
     margin-top: 10px;
     margin-bottom: 10px;
 }
-
-
-
 
