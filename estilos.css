@@ -557,7 +557,9 @@ main {
     flex-direction: column; 
     overflow: hidden;
 }
-
+.notificaciones{
+    display: none;
+}
 
 .historiaclinica{
     width: 100%;
