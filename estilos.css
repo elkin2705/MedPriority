@@ -557,9 +557,7 @@ main {
     flex-direction: column; 
     overflow: hidden;
 }
-.notificaciones{
-    display: none;
-}
+
 
 .historiaclinica{
     width: 100%;
@@ -786,9 +784,7 @@ h4{
     font-style: normal;
    font-size: 104%;
 }
-.notificaciones{
-    display: none;
-}
+
 main {
     height: 100%;
     width: 80%;
@@ -901,7 +897,9 @@ main {
     flex-direction: column;
     align-items: center;
 }
-
+.notificaciones{
+    display: none;
+}
 
 .pregunt_1, .pregunt_2, .pregunt_3, .pregunt_4 {
     width: 100%;
