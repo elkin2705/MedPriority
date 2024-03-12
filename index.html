@@ -11,11 +11,11 @@
 </head>
 
 <body>
-    <!---- <div class="contenedor_principal">-->
-<section class="todo" id="">
+ 
+
 
 <!--contenedor principal de el menu este dividido en 3 subcontenedore -->
-    <div class="contenedor_menu">
+    <div class="contenedor_menuprincipal">
         <div class="con_menu1"> <!--contendor 1 del contenedor principal de menu este contenedor esta divido en dos contenedores-->
             <div class="logoimagen"></div>  <!---contenedor de la imagen del  logo -->
             <div class="logoletrass"><p>MEDPRIORITY</p></div> <!---nombre del proyecto  -->
@@ -24,19 +24,19 @@
             
         </div><!--fin del contenedor 1 -->
 
-        <div class="con_menu2"><!---contenedor 2 de cotenedor principal del menu -->
-            <div class="con_internos1">
-                <div class="opciones_menus"></div><!--contenedor basio para la ceparacion del logo y el menu -->
-                <div class="opciones_menu"><a href="#">Inicio</a></div>
-                <div class="opciones_menu"><a href="#">Notificaciones</a></div>
-                <div class="opciones_menu"><a href="#">Historia Clínica</a></div>
-                <div class="opciones_menup"><a href="#">Agregar Citas</a></div><!---tiene una clase diferente para poder asignarle el color predeterminado -->
+        <div class="con_menuopciones"><!---contenedor 2 de cotenedor principal del menu -->
+            <div class="con_internosopcionesmenu">
+                <div class="separaropcionesdelogo"></div><!--contenedor basio para la ceparacion del logo y el menu -->
+                <div class="opciones_menu"><a href="#contenedor1">Inicio</a></div>
+                <div class="opciones_menu"><a href="#contenedor2">Notificaciones</a></div>
+                <div class="opciones_menu"><a href="#contenedor3">Historia Clínica</a></div>
+                <div class="opciones_menup"><a href="#contenedor4">Agregar Citas</a></div><!---tiene una clase diferente para poder asignarle el color predeterminado -->
             </div>
 
 
-            <div class="con_internos2"><!--contenedor numero 3 del contenedor principal del menu -->
-                <div class="opciones_menud">  Cerrar sesión</div><!--contenedor de cerrar secion -->
-                <div class="opciones_menudimagen"> </div> <!--contenedor de la imagen al lado de el cerrar secion --> 
+            <div class="contenedorgeneralparacerrarsecion"><!--contenedor numero 3 del contenedor principal del menu -->
+                <div class="cerrarsecion">  Cerrar sesión</div><!--contenedor de cerrar secion -->
+                <div class="iconocerrasecion"> </div> <!--contenedor de la imagen al lado de el cerrar secion --> 
             </div>
 
             <label for="check" class="escondermenu"> &#215</label> <!-- la equiz del menu-->
@@ -45,16 +45,16 @@
     </div>
 
 
+    <main>
 
-
-    <div class="contenedor_formulario"><!--contenedor principal de el formulario esta dividido en 3 contenedores tambien  -->
+    <div id="contenedor4" class="contenedor_formulario"><!--contenedor principal de el formulario esta dividido en 3 contenedores tambien  -->
 
         <div class="cont_formulario1">
-            <div class="contendor2">
-                <div class="cont_formulario1_1">
+            <div class="con_internoformulario1">
+                <div class="contenedoragendarcita">
                     <p>AGENDAR CITA </p>
                 </div>
-                <div class="cont_formulario1_2"> </div><!-- conttenedor de  la imagen usuario-->
+                <div class="imageniconousuario"> </div><!-- conttenedor de  la imagen usuario-->
             </div>
          <div class="linea"><hr></div>
            </div>
@@ -63,24 +63,24 @@
             <p>AGENDAR CITA </p>
         </div>
       <!--contenedor general  que tiene el formulario -->
-        <div class="cont_formulario2">
+        <div class="contenedor_preguntasformlulario">
             <div class="preguntasformulario2">
                 <div class="pregunt_2">
-                  <div class="r3"> <label for="tipo">Identificación: </label></div> 
+                  <div class="r3"> <label class="tipo">Identificación: </label></div> 
                      <div class="r3">   <input type="text" class="tiposs" name="Nombre"></div>
                 </div>
                 <div class="pregunt_2">
-                  <div class="r3">  <label for="tipo">Tipo Identificación:</label></div>
+                  <div class="r3">  <label class="tipo">Tipo Identificación:</label></div>
                       <div class="r3"> <input type="text" class="tiposs" name="Edad">    </div>              
                 </div>
             </div>
             <div class="preguntasformulario2">
                 <div class="pregunt_2">
-                  <div class="r3"> <label for="tipo">Nombre: </label></div> 
+                  <div class="r3"> <label class="tipo">Nombre: </label></div> 
                      <div class="r3">   <input type="text" class="tiposs" name="Nombre"></div>
                 </div>
                 <div class="pregunt_2">
-                  <div class="r3">  <label for="tipo">Edad:</label></div>
+                  <div class="r3">  <label class="tipo">Edad:</label></div>
                       <div class="r3"> <input type="text" class="tiposs" name="Edad">    </div>              
                 </div>
             </div>
@@ -91,7 +91,7 @@
                     
                 </div>
                 <div class="pregunt_3">
-                 <div class="r3">  <label for="tipo">Trabajo:</label></div>
+                 <div class="r3">  <label class="tipo">Trabajo:</label></div>
                       <div class="r3"> <input type="text" class="tiposs" name="tipo"></div>
                     
                 </div>
@@ -103,7 +103,7 @@
                 </div>
 
                 <div class="pregunt_4">
-                    <div  class="r3"><label for="tipo">Nivel de gravedad: </label></div>
+                    <div  class="r3"><label class="tipo">Nivel de gravedad: </label></div>
                    <div class="r3"> <input type="text" class="tiposs" name="tipo"></div>
                 </div>
             </div>
@@ -116,11 +116,11 @@
 
 
         <!--contenedor  de fechas de la cita -->
-        <div class="con_formulario3">
+        <div class="contenedorformulariofinal">
                 <div class="separacion"></div>
-            <div id="contenedor_citas" class="con_formulario_final1"><!--este contenedor tiene un id para poder clonarlo-->
+            <div id="contenedor_citas" class="contenedorpreguntasfinal"><!--este contenedor tiene un id para poder clonarlo-->
                 <div class="con_final">
-                    <div  id="tipoci"  class="pregunt_5"><!-- el id es para poder no mostrarlo en los contenedores clonados -->
+                    <div  id="tipoci"  class="pregunt_5">
                         <label class="tipos">Tipo de cita:</label>
                         <select class="tipocita" name="tipocita"></select>
                     </div>
@@ -137,13 +137,13 @@
                 <div class="con_final">
                     <div class="pregunt_5">
                         <label class="horas">Hora inicio:</label>
-                        <input type="time" id="hora" name="hora">
+                        <input type="time" id="hora" class="hora"  name="hora">
                     </div>
                 </div>
                 <div class="con_final">
                     <div class="pregunt_5">
                         <label class="horas">Hora final:</label>
-                        <input type="time" id="hora" name="hora">
+                        <input type="time" id="hora" class="hora" name="hora">
                     </div>
                 </div>
                 <div class="con_final">
@@ -173,13 +173,129 @@
 
 
     </div>
+   <div id="contenedor3" class="historiaclinica">
+         <div class="interno1">
+            <div class="hisinternos1"><p>Historia Clinica</p></div>
+            <div class="hisinternos2"><div class="buscar"></div> <button class="btnbuscar"> Buscar</button></div>
+         </div>
+         <div class="interno2"><hr></div>
+         <div class="interno3"></div>
+         <div class="interno4"><div class="tablainterna">
+            <div class="filasinternas">
+            <div class="columnasinternas"><h4>Nombres</h4></div>
+            <div class="columnasinternas"><h4>Apellidos</h4></div>
+            <div class="columnasinternas"><h4>Edad</h4></div>
+            <div class="columnasinternas"><h4>Hora entrada</h4></div>
+            <div class="columnasinternas"><h4>Hora Salida</h4></div>
+            <div class="columnasinternas"><h4>E.P.S</h4></div>
+            <div class="columnasinternas"><h4>Entidad Remitente</h4></div>
+            <div class="columnasinternas"><h4>Detalles</h4></div>
+            </div>
+
+
+            <div class="filasinternas">
+            <div class="columnasinternas"></div>
+            <div class="columnasinternas"></div>
+            <div class="columnasinternas"></div>
+            <div class="columnasinternas"></div>
+            <div class="columnasinternas"></div>
+            <div class="columnasinternas"></div>
+            <div class="columnasinternas"></div>
+            <div class="columnasinternas"></div></div>
+            <div class="filasinternas"><div class="columnasinternas"></div>
+            <div class="columnasinternas"></div>
+            <div class="columnasinternas"></div>
+            <div class="columnasinternas"></div>
+            <div class="columnasinternas"></div>
+            <div class="columnasinternas"></div>
+            <div class="columnasinternas"></div>
+            <div class="columnasinternas"></div></div>
+            <div class="filasinternas"><div class="columnasinternas"></div>
+            <div class="columnasinternas"></div>
+            <div class="columnasinternas"></div>
+            <div class="columnasinternas"></div>
+            <div class="columnasinternas"></div>
+            <div class="columnasinternas"></div>
+            <div class="columnasinternas"></div>
+            <div class="columnasinternas"></div></div>
+            <div class="filasinternas"><div class="columnasinternas"></div>
+            <div class="columnasinternas"></div>
+            <div class="columnasinternas"></div>
+            <div class="columnasinternas"></div>
+            <div class="columnasinternas"></div>
+            <div class="columnasinternas"></div>
+            <div class="columnasinternas"></div>
+            <div class="columnasinternas"></div></div>
+            <div class="filasinternas"><div class="columnasinternas"></div>
+            <div class="columnasinternas"></div>
+            <div class="columnasinternas"></div>
+            <div class="columnasinternas"></div>
+            <div class="columnasinternas"></div>
+            <div class="columnasinternas"></div>
+            <div class="columnasinternas"></div>
+            <div class="columnasinternas"></div></div>
+            <div class="filasinternas"><div class="columnasinternas"></div>
+            <div class="columnasinternas"></div>
+            <div class="columnasinternas"></div>
+            <div class="columnasinternas"></div>
+            <div class="columnasinternas"></div>
+            <div class="columnasinternas"></div>
+            <div class="columnasinternas"></div>
+            <div class="columnasinternas"></div></div>
+            <div class="filasinternas"><div class="columnasinternas"></div>
+            <div class="columnasinternas"></div>
+            <div class="columnasinternas"></div>
+            <div class="columnasinternas"></div>
+            <div class="columnasinternas"></div>
+            <div class="columnasinternas"></div>
+            <div class="columnasinternas"></div>
+            <div class="columnasinternas"></div></div>
+         </div></div>
     </div>
-</section>
+    <div id="contenedor2" class="notificaciones">
+     <div class="contenedortitulo">
+        <div class="contenedoragendarcitas">
+            <p>Notificaciones </p>
+        </div>
+        <div class="imageniconousuario"> </div>
+     </div>
+     <div class="rayaseparadora"><hr></div>
+     <div class="separa"></div>
+
+     <div class="letrasnotificaciones">
+        <div class="titulonotificaciones"><h1>Notificacion:1</h1></div>
+     <div class="titulonotificaciones"><h1>Notificacion:2</h1></div>
+     <div class="titulonotificaciones"><h1>Notificacion:3</h1></div>
+    </div>
+
+
+
+     <div class="contenedornotificaciones">
+        <div class="notificacioness"></div>
+        <div class="notificacioness"></div>
+        <div class="notificacioness"></div>
+     </div>
+     <div class="letras">
+         <div class="titulonotificaciones"><h1>Notificacion:4</h1></div>
+     <div class="titulonotificaciones"><h1>Notificacion:5</h1></div>
+     <div class="titulonotificaciones"><h1>Notificacion:6</h1></div></div>
+     <div class="contenedornotificaciones2">
+        <div class="notificacioness"></div>
+     <div class="notificacioness"></div>
+     <div class="notificacioness"></div>
+    </div>
+
+    </div>
+
+
+ </main>
+    </div>
+
 <script>
     document.addEventListener('DOMContentLoaded', function() {
         
         var checkbox = document.getElementById('check');
-        var menuContainer = document.querySelector('.contenedor_menu');
+        var menuContainer = document.querySelector('.contenedor_menuprincipal');
     
         //  mostrarmenu cono de la hamburguesa 
         var menuIcon = document.querySelector('.mostrarmenu');
@@ -200,6 +316,7 @@
             menuContainer.style.left = '-100%';
         });
     });
+
 
 
     document.addEventListener('DOMContentLoaded', function() {
@@ -252,12 +369,7 @@
         });
     }
 });
-
-
-        </script>
-
-
-
+     </script>
 
 
 </body>
