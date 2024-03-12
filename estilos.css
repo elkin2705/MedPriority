@@ -1,7 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Adamina&display=swap');
+
 * {
     padding: 0;
     margin: 0;
-
+    font-family: "Adamina", serif;
+    font-style: normal;
+   font-size: 99%;
 }
 
 body {
@@ -11,30 +15,33 @@ body {
     font-size: 120%;
    justify-content: center;
 }
+
 /* contenedor principal a peticion de kevin */
 .todo{
     width:100%;
     height: 100%;
     display: flex;
 }
+
+
+/* -----------------------------------------estilos al menu---------------------------------------------------------------------------*/
 /* conttenedor que me contiene el menu  lateral izquierdo */
-.contenedor_menu {
+.contenedor_menuprincipal {
 
     height: 105%;
     width: 20%;
     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
     ;
-  
 }
-
 /* contenedor dentro del menu que contiene la imagen del logo y el nombre del proyecto */
 .con_menu1 {
-
     height: 10%;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    
+ 
 }
 
 /* contenedor  del logo */
@@ -65,66 +72,38 @@ body {
     text-align: center;
 }
 
-/* estilos del  agendar citas  titulo*/
-p {
-    font-family:'Adamina' ;
-    color: #1BC100;
-    font-size: 130%;
-}
-/* contenedor principal que contiene los contenedores del menu*/
-.con_internos1 {
-    display: flex;
-    flex-direction: column;
-}
-
-
-/*estilos a las opciones del menu*/
-.opciones_menu a {
-    text-decoration: none;
-    color: black;
-}
-/*este le da estilos al menu que no tiene el mismo nombre en la clase*/
-.opciones_menup a {
-    text-decoration: none;
-    color: black;
-  /
-
-}
-/*mas estilos al menu*/
-.con_internos1 .opciones_menu:hover {
-    background-color: #1BC100;
-}
-
-.pregunt_1 input {
-    margin-left: 10px;  
-}
-
-/*div vacio que me permite saparar uno de otros para obttener la distacias deseada entre la imagen y la  el menu*/
-.opciones_menus {
-    height: 13%;
-
-}
-
 /*segundo contenedor del menu */
-.con_menu2 {
+.con_menuopciones {
     height: 80%;
     display: flex;
     justify-content: space-between;
     display: contents;
+   
+   
 }
+
 
 /*contenedor que contine  las opciones del menu */
-.con_internos1 {
-
-    height: 72%;
+.con_internosopcionesmenu {
+ 
+    height: 73%;
     display: flex;
-    justify-content: center;
+    justify-content: start;
     display: block;
+    display: flex;
+    flex-direction: column;
+
+    
+}
+
+
+/*div vacio que me permite saparar uno de otros para obttener la distacias deseada entre la imagen y la  el menu*/
+.separaropcionesdelogo {
+    height: 17%;
+    
 
 }
-.responcilagendar{
-    display: none;
-}
+
 /* estilos a las opciones del menu*/
 .opciones_menu {
     height: 15%;
@@ -146,24 +125,25 @@ p {
     height: 10%;
     background-color: #1BC100;
 }
-
-/*cerrar secion*/
-.opciones_menud {
-    font-size: 80%;
-    width: 40%;
-    font-family:'Adamina' ;
+/*estilos a las opciones del menu*/
+.opciones_menu a {
+    text-decoration: none;
+    color: black;
+}
+/*este le da estilos al menu que no tiene el mismo nombre en la clase*/
+.opciones_menup a {
+    text-decoration: none;
+    color: black;
+  
 
 }
-/*  contenedor de imagen de el icono usuaario */
-.opciones_menudimagen {
-    background-image: url(imagenes/usuario.png);/* imagen de icono de  usuario*/
-    width: 15%;
-    height: 50%;
-    background-size: 100% 100%;
+/*mas estilos al menu*/
+.con_internosopcionesmenu .opciones_menu:hover {
+    background-color: #1BC100;
 }
 
 /*div principal de cerrar secion*/
-.con_internos2 {
+.contenedorgeneralparacerrarsecion {
     height: 8%;
     justify-content: center;
     align-items: center;
@@ -171,12 +151,31 @@ p {
     justify-content: center;
 }
 
+
+/*cerrar secion*/
+.cerrarsecion {
+    font-size: 100%;
+    width: 50%;
+
+}
+/*  contenedor de imagen de el icono usuaario */
+.iconocerrasecion {
+    background-image: url(imagenes/cerrarsecion.jpeg);/* imagen de icono de  usuario*/
+    width: 15%;
+    height: 50%;
+    background-size: 100% 100%;
+}
+/* ------------------------------- estilos al contenedor general del formulario---------------------------------------- */
+
+
 /*contenedor principal del formulario */
 .contenedor_formulario {
-    height: 78%;
-    width: 80%;
+    height: 100%;
+    width: 90%;
+    flex: none;
+    max-height: 100%;
+    max-width: 90%;
 }
-
 /* contendor del icono usuario agendar cita y raya*/
 .cont_formulario1 {
     height: 20%;
@@ -184,22 +183,19 @@ p {
     display: block;
 }
 
+hr {
+    width: 85%;
+}
 /* contenedor de agendar cita e icono de usuario*/
-.contendor2 {
+.con_internoformulario1 {
     height: 80%;
     width: 90%;
     display: flex;
     justify-content: space-between;
 }
-/* estilos a la linea separadora debajo de el agendar cita */
-.linea {
-    width: 80%;
-    display: flex;
-    justify-content: center;
-}
 
 /* contenedor de agendar cita*/
-.cont_formulario1_1 {
+.contenedoragendarcita {
     height: 90%;
     width: 40%;
     display: flex;
@@ -208,19 +204,131 @@ p {
     align-items: end;
 }
 /* contenedor del icono de usuario al lado de agendar cita*/
-.cont_formulario1_2 {
+.imageniconousuario {
     background-size: 100% 100%;
-    height: 100%;
+    margin-top: 2%;
+    height: 80%;
     width: 10%;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url(imagenes/usuario.png);
+    background-image: url(imagenes/usuarioicono.jpeg);
+   
+}
+/* estilos a la linea separadora debajo de el agendar cita */
+.linea {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+}
+/* esta disponible none ya que solo se mostrara en el diseño responcil*/
+.responcilagendar{
+    display: none;
 }
 
-/*contenedor debajo de  el formulario*/
 
-.con_formulario3 {
+
+/* estilos del  agendar citas  titulo*/
+p {
+    color: #1BC100;
+    font-size: 180%;
+}
+
+/*estilos al formulario*/
+.contenedor_preguntasformlulario {
+    width: 100%;
+    height: 33%;
+    display: flex;
+    display: block; 
+}
+/*contenedor donde van incertadas las preguntas*/
+.preguntasformulario2 {
+    width: 90%;
+    height: 20%;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 1%;
+}
+/* contenedor donde  ponga preguntas individual*/
+.pregunt_2 {
+    height: 100%;
+    width: 30%;
+    display: block;
+}
+/*doy tamaños a los label*/
+.r3 {
+    height: 50%;
+    width: 100%;   
+
+}
+
+
+.tipos {
+    width: 80%;
+    
+    
+}
+.tipo{
+  
+    width: 100%;
+   
+}
+/*estilos a los tipo text*/
+.tiposs {
+    border: 1px solid #EEEEEE;
+    background-color: #F7F7F7;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    margin-top: 3%;
+  
+}
+.preguntasformulario3 {
+    width: 90%;
+    height:20%;
+ margin-top: 1%;
+    display: flex;
+    justify-content: space-around;
+    
+
+}
+
+
+.preguntasformulario4 {
+    width: 90%;
+    height: 20%;
+    display: flex;
+   justify-content: space-around;
+   margin-top: 1%;
+}
+.pregunt_3 {
+    height: 100%;
+    width: 30%;
+    align-items: center;
+    display: block;
+    justify-content: space-around;
+
+
+}
+
+
+.pregunt_4 {
+    height: 100%;
+    width: 30%;
+    align-items: center;
+    display: block;
+justify-content: space-around;
+  
+}
+
+.raya {
+    width: 95%;
+       display: flex;
+    justify-content: center;
+    margin-top: 3%;
+}
+
+.contenedorformulariofinal {
 
     height: 45%;
     width: 100%;
@@ -229,27 +337,103 @@ p {
 
 }
 
-.opcion {
-    height: 100%;
-    width: 50%;
+.separacion {
+    width: 100%;
+    height: 10%;
 }
 
-.con_formulario_final1 .inicio {
+
+.contenedorpreguntasfinal {
+    display: flex;
+    height: 20%;
+    align-items: center;
+    width: 100%;
+   margin-left: 5%; 
+ justify-content: space-between;
+}
+
+.contenedorpreguntasfinal .inicio {
     margin: 0 10%;
 }
 
-.con_formulario_final2 {
 
-    height: 80%;
-    width: 100%;
+
+.con_final {
+    width: 16%;
+    height: 100%;
+
+
+}
+.pregunt_5 {
+    height: 100%;
+    width: 70%;
+    display: block;
+ 
+    align-items: center;
+    margin-left: 18%;
+}
+
+.finalcontenedor {
+    width: 50%;
+    height: 100%;
+
+}
+
+.fecha {
+    height: 50%;
     display: flex;
-    
+    align-items: center;
+    justify-content: center;
 }
 
-.mensaje2{
-    display: none;
+.date {
+    height: 100%;
+    width: 100%;
+    display: block;
+
+    align-items: center;
+
 }
-/*estilos para el select tipo de cita */
+
+
+
+
+
+#hora {
+    background-color: #F7F7F7;
+    border-radius: 6px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    outline: none; 
+    width: 100%;
+    border: 1px solid #EEEEEE;
+}
+
+select {
+    background-color: #F7F7F7;
+    border-radius: 5px;
+    border: 1px solid #EEEEEE;
+    width: 100%;
+
+
+}
+
+
+.fechas {
+
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: #f4f4f4;
+    color: #333;
+
+}
+
+.horas {
+    width: 70%;
+}
 select {
     font-size: 16px;
     padding: 8px;  
@@ -266,47 +450,55 @@ select {
 
 }
 
+
+
+
+
+h2 {
+    font-size: 70%;
+    color: #868686;
+  
+}
+
+
+.btnmas {
+    cursor: pointer;
+    width: calc(50%);
+    height: calc(50%);
+    background-size: 100% 100%;
+    border: none;
+    border-radius: 100px;
+    background-image: url(imagenes/imagebotton.png);
+
+}
+
+.con_formulario_final2 {
+
+    height: 80%;
+    width: 100%;
+    display: flex;
+  
+    
+}
+
 .con_final1 {
 
-    width: 80%;
+    width: 75%;
     height: 50%;
     justify-content: center;
     align-items: center;
     display: inline-block;
-
-
+   
 }
-
-.mensaje {
+.separacionbotton {
+    width: 80%;
+    height: 40%;
+}
+.final2 {
+    width: 80%;
+    height: 50%;
     display: flex;
-    width: 100%;
-    height: 100%;
-    align-items: center;
-    align-items: flex-end;
-
-    justify-content: center;
-
-}
-
-h2 {
-    font-size: 70%;
-    color: #858282;
-}
-
-
-
-
-
-.con_final2 {
-    background-image: url(imagenes/medica.png);
-    width: calc(10%);
-    height: calc(10%);
-    margin-top: 3%;
-   margin-right: 10%;
-    height: 100%;  
-    background-size: contain;
-    width:17%;
-    
+    justify-content:end;
    
    
 }
@@ -324,274 +516,245 @@ h2 {
     text-transform: uppercase;
     transition: background-color 0.3s ease;
     width: 30%;
-    height: 90%;
 }
-
-
-
-.raya {
-    width: 95%;
-       display: flex;
-    justify-content: center;
-}
-
-.separacion {
-    width: 100%;
-    height: 10%;
-}
-
-hr {
-    width: 85%;
-}
-
-
-.horas {
-    width: 70%;
-}
-
-
-
-.final2 {
+.mensaje {
+    display: flex;
     width: 80%;
     height: 40%;
-    display: flex;
-    justify-content: end;
-
-
-}
-
-.cont_formulario1_3 {
-    width: 20%;
-    height: 20%;
-}
-
-
-/*estilos al formulario*/
-.cont_formulario2 {
-    width: 100%;
-    height: 50%;
-    display: flex;
-    display: block;
-  
-}
-
-.preguntasformulario1 {
-    width: 90%;
-    height: 20%;
-    display: flex;
-    justify-content: space-around;
-}
-
-.pregunt_1 {
-    height: 100%;
-    width: 30%;
-    display: flex;
-}
-
-.preguntasformulario2 {
-    width: 90%;
-    height: 20%;
-    display: flex;
-    justify-content: space-around;
-}
-
-.pregunt_2 {
-    height: 100%;
-    width: 30%;
-    display: flex;
     align-items: center;
-    justify-content: space-around;
-
-}
-
-.preguntasformulario3 {
-    width: 90%;
-    height: 20%;
-
-    display: flex;
-    justify-content: space-around;
-
-}
-
-.pregunt_3 {
-    height: 100%;
-    width: 30%;
-    align-items: center;
-    display: flex;
-    justify-content: space-around;
-
-
-}
-
-.preguntasformulario4 {
-    width: 90%;
-    height: 20%;
-    display: flex;
-   justify-content: space-around;
-   
-}
-
-.pregunt_4 {
-    height: 100%;
-    width: 30%;
-    align-items: center;
-    display: flex;
-justify-content: space-around;
-  
-}
-
-.tipos {
-    width: 80%;
-}
-
-
-.tiposs {
-    border: 1px solid #EEEEEE;
-    background-color: #F7F7F7;
-    width: 120%;
-    height: 100%;
-    border-radius: 5px;
-
-}
-
-
-.con_formulario_final1 {
-    display: flex;
-    height: 33%;
-    align-items: center;
-    width: 100%;
-  justify-content: center;
-
-
-
-}
-
-.btnmas {
-    cursor: pointer;
-    width: calc(40%);
-    height: calc(40%);
-    background-size: 100% 100%;
-    border: none;
-    border-radius: 100px;
-    background-image: url(imagenes/imagebotton.png);
-
-}
-
-
-
-.r3 {
-    height: 45%;
-    width: 40%;
-
-
-}
-
-.pregunt_5 {
-    height: 100%;
-    width: 80%;
-    display: block;
-
-    align-items: center;
-}
-
-.inicio {
-    height: 100%;
-    width: 40%;
-    display: block;
-    align-items: center;
-    
-
-}
-
-.fechas {
-
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 16px;
-
-    background-color: #f4f4f4;
-    color: #333;
-
-}
-
-.final {
-
-    height: 100%;
-    width: 40%;
-    display: block;
+    align-items: flex-end;
     justify-content: center;
-
-}
-
-.finalcontenedor {
-    width: 50%;
-    height: 100%;
-
-}
-
-
-
-
-.tipo {
-
-    border: none;
-
-    width: 1000%;
-    height: 100%;
-    border-radius: 20px;
-}
-
-.con_final {
-    width: 16%;
-    height: 70%;
-   
-}
-
-.separacionbotton {
-    width: 100%;
-
-    height: 90%;
-}
-
-#hora {
-    background-color: #F7F7F7;
-   
-    border-radius: 6px;
     
-    padding: 10px;
-   
-    margin-bottom: 10px;
-   
-    border: none;
-    
-    outline: none;
-   
-    width: 100%;
-    border: 1px solid #EEEEEE;
+
 }
-.conmostrarmenu{
+.con_final2 {
+    background-image: url(imagenes/medica.png);
+    width: calc(10%);
+    height: calc(50%);  
+   width: 30%;
+   height: 78%;
+   background-size: 100% 100%;
+   
+}
+
+.mensaje2  h2{
+    display: none;
+    flex: none;
+    color: #23DA06;
     display: none;
 }
+.con_internosopcionesmenu .opciones_menu a.active {
+    background-color: green;
+    color: white;
+}
 
-select {
-    background-color: #F7F7F7;
-    border-radius: 5px;
-    border: 1px solid #EEEEEE;
+/* -------------------------estilos del contendor 2 historia clinica------------------------------------------ */
+
+main {
+    height: 100%;
+    width: 80%;
+    display: block;
+    flex-direction: column; 
+    overflow: hidden;
+}
+
+
+.historiaclinica{
     width: 100%;
+    height: 100%;   
+   
+}
+.interno1{
+    width: 100%;
+    height: 15%;
+  
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+.hisinternos1{
+    width: 40%;
+    height: 100%;
+   
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hisinternos2{
+    width: 40%;
+    height: 80%;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  
+}
+.interno2{
+    width: 100%;
+    height: 2%;
+}
+.interno3{
+    width: 100%;
+    height: 15%;
+}
+.buscar{
+    width: 40%;
+    height: 45%;
+    border-radius: 5px;
+    background-color: rgb(242, 242, 242);
+ align-items: end;
+    
+}
+.btnbuscar{
+    width: 15%;
+    height: 35%;
+    background-color: #23DA06;
+  margin-left: 5%;
+    border: none;
+    border-radius: 15px;
+  align-items: end;
+  
+    
+}
 
 
+.interno4{
+    width: 100%;
+    height: 90%;
+   
+    display: flex;
+    justify-content: center;
+   }
+
+   .tablainterna{
+    width: 80%;
+    height: 70%;
+    background-color: rgb(242, 242, 242);
+   
+    display: block;
 }
- /* Estilos generales para mejorar la responsividad */
- * {
-    box-sizing: border-box;
+.filasinternas{
+    width: 100%;
+    height: 12.5%;
+   border-radius:15px ;
+   display: flex;
 }
 
-body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Adamina', sans-serif;
+h4{
+    text-decoration: none;
+    color: black;
+    font-family: 'Adamina';
+    font-size: 80%;
 }
+
+
+.columnasinternas{
+    width: 12.5%;
+    height: 100%;
+    border: 1px solid #E1E1E1;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    
+}
+
+
+.pregunt_1 input {
+    margin-left: 10px;  
+}
+
+/*---------------------------------------------------estilos notificaciones---------------------------------------------*/
+.notificaciones{
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+.contenedortitulo
+{
+    display: flex;
+    width: 90%;
+    height: 15%;
+    justify-content: space-between;
+   
+}
+.contenedoragendarcitas{
+    width: 30%;
+    height: 100%;
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    text-align: end;
+    
+ 
+}
+
+.rayaseparadora{
+    width: 100%;
+    height: 3%;
+}
+.separa{
+    width: 100%;
+    height: 5%;
+ 
+}
+.letrasnotificaciones{
+    width: 100%;
+    height: 5%;
+   
+    display: flex;
+    justify-content: space-around;
+}
+.contenedornotificaciones{
+   width: 100%;
+   height: 25%;
+ 
+}
+.letras{
+    width: 100%;
+    height:5%;
+  
+    display: flex;
+    justify-content: space-around;
+}
+.contenedornotificaciones2{
+    width: 100%;
+   height:25%;
+   
+}
+.titulonotificaciones{
+    width: 25%;
+    height: 100%;
+    
+}
+.contenedornotificaciones{
+   display: flex;
+   justify-content: space-around;
+}
+.notificacioness{
+    width: 25%;
+    height: 100%;
+   
+    border-radius: 15px;
+    background-image: url(imagenes/notificaciones.jpg);
+    background-size:  100% 100%;
+   
+    
+}
+.contenedornotificaciones2{
+    display: flex;
+   justify-content: space-around;
+}
+
+
+
+
+
+
+
+
+
+
+ 
 
 /* Estilos para el menú y la navegación */
 .mostrarmenu{
@@ -610,287 +773,323 @@ body {
 .escondermenu{
     display: none;
 }
-
 /* Estilos generales */
 @media (max-width: 768px) {
-    .contenedor_menu {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100vh;
-        background-color: #ffffff;
-        transition: 0.5s;
-        padding-top: 60px; 
-        z-index: 100;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-   
-    p {
-        font-size: 110%;
-        font-family: 'Adamina' ;
-    }
+    @import url('https://fonts.googleapis.com/css2?family=Adamina&display=swap');
 
-    #check:checked ~ .contenedor_menu {
-        left: 0;
-    }
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "Adamina", serif;
+    font-style: normal;
+   font-size: 104%;
+}
 
-    .mostrarmenu, .escondermenu {
-        display: block;
-        font-size: 300%;
-        color: #1BC100;
-        margin-top: -4%;
-    }
+main {
+    height: 100%;
+    width: 80%;
+    display: block;
+    flex-direction: column;
+   overflow-y: auto; 
+ 
+}
 
-     .con_menu1, .con_menu2, .logoimagen, .logoletrass, .con_internos1 {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
+.contenedor_menuprincipal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #ffffff;
+    transition: 0.5s;
+    padding-top: 60px; 
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.con_menu1, .con_menuopciones, .logoimagen, .logoletrass, .con_internosopcionesmenu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
-    .opciones_menu, .opciones_menup {
-        width: 300%;
-        text-align: center;
-    }
-
-    .contenedor_formulario, .cont_formulario1, .cont_formulario2, .cont_formulario3 {
-        width: 100%;
-        padding: 5%;
-    }
-    /*contendor al principio de el responcil */
-    .cont_formulario1{
-       height: 13%;
-     background-color: white;
-       position: fixed;
-       margin-top: -5%; /* he utilizado el margin  para pegar el contenedor al inicio*/
-      
-
-    }
-    .cont_formulario1_1{
-        margin-top: 15%;
-        margin-left: 20%;
-        width: 70%;
-        text-align: center;
-        
-    }
-    .linea{
-        width: 115%;
-        height: 1%;
-        margin-left:-13%;/* he utilizado el margin aca para separa la linea del inicio */
-        display: flex;
-        justify-content: center;
-       
-        
-    }
-    .linea hr{
-        width: 85%;
-        align-items: center;
-        display: flex;
-        justify-content: center;
-     
-    }
-    label{
-        font-size: 80%;
-        font-family: 'Adamina';
-    }
-    .cont_formulario1_1 p{
-       font-size: 110%;
-       color: #23DA06;
-       display: none;
-    }
-    .cont_formulario1_2{ 
-        width: 20%;
-    }
-
-    .cont_formulario2 {
-        height: 100%;   
-      
-
-    }
-
-    .con_menu2 {
-        width: 100%;
-    }
-
-  .cont_formulario2, .cont_formulario3, .preguntasformulario1, .preguntasformulario2, .preguntasformulario3, .preguntasformulario4 {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .pregunt_1, .pregunt_2, .pregunt_3, .pregunt_4 {
-        width: 100%;
-        height: 40%;
-        display: block;       
-    }
-   /* he maejado este  contenedor para el titulo de agendar citas */
-    .responcilagendar{
-        display: flex;
-        width: 100%;
-        height: 10%;
-        margin-top: 32%;
-        justify-content: center;
-        text-align: center;
-    }
-    .con_internos2{
-        width: 100%;
-        display: flex;
-      
-    }
-    .opciones_menud{
-        width: 30%;
-        
-    }
-    .opciones_menudimagen{
-        width: 15%;
-        
-    }
-    /*estilos del esconder menu para el fondo verde*/
-    .mostrarmenu {
-        background-color: #23DA06; 
-        color: white; 
-        padding: px;
-        line-height: 0.8; 
-        vertical-align: middle; 
-        height: 5%;
-        border-radius: 8px;
-       
-    }
-    .r3 {
-        width: 100%;     
-        height: 50%;
-        justify-content: center;
-        align-items: center;
+.con_menuopciones {
+    width: 100%;
     
-    }
-
-    .tiposs {
-        width: 90%;
-    }
-
-    select, input[type="date"], input[type="time"] {
-        width:100%;
-    }
-
-    .final2 button.submit-btn {
-        width: 100%;
-    }
-
-    .con_formulario_final1 {
-        display: block;
-        width: 100%;
-
-     padding-left: 18%;
     
+}
+.con_internosopcionesmenu{
+          
+    width: 100%;
+}
+.opciones_menu, .opciones_menup {
+    width: 100%;
+    text-align: center;
+}
+.contenedorgeneralparacerrarsecion {
+    width: 100%;
+    display: flex;
+    
+    
+}
 
-    }
+.cerrarsecion {
+    width: 40%;
+    
+}
 
-    .date {
-        width: 180%;
-    }
+.iconocerrasecion {
+    width: 15%;
+    margin-left: 5%;
+}
+.contenedor_formulario, .cont_formulario1, .contenedor_preguntasformlulario, .contenedorformulariofinal {
+    width: 100%;
+    padding: 5%;
+}
+.cont_formulario1 {
+    height: 13%;
+    background-color: white;
+    position: fixed;
+     margin-top: -5%;
+ margin-left:-15%;
+    
+}
+.contenedoragendarcita{
+    display: none;
+}
+.imageniconousuario { 
+    width: 20%;
+    margin-left: 77%;
+}
 
-    .con_final, .tipocita, .fechas {
-        width: 50%;
-        justify-content: center;
-        align-items: center;
-    }
+.linea {
+    width: 100%;
+    height: 1%;
+    margin-left:-3%;
+    display: flex;
+    justify-content: center;
+}
 
-    .tipocita, .fechas {
-        width: 100%;
-    }
+.linea hr {
+    width: 85%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+.responcilagendar {
+    display: flex;
+    width: 100%;
+    height: 10%;
+    margin-top: 50%;
+    justify-content: center;
+    text-align: center;
+}
 
-    .con_final2 {
-        width: calc(83%);
-        height: calc(90%);
-        margin-left: 35%;/*he utilizado el margin left para mover la imagen a la derecha el contenedor completo */
-        width: 70%;
-    }
-
-   
-    .separacionbotton {
-        height: 100%;
-    }
-
-    .con_formulario3 {
-        display: block;
-        width: 100%; 
-        text-align: center;
-        justify-content: center;
-        height: 53%;
-      
-    }
-   
-    .con_formulario_final2 {
-        display: block;
-        width: 100%;
-      
-    }
-
-    .raya {
- width: 100%;
- margin-top: -30%;/*  he utilizazdo el margin para pegar la linea 2 al formulario */
-
-    }
-    .raya hr{
-        width: 100%;
-    }
-
-    #contenedor_citas {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin-top: 5%;
-        height: 100%;
-       
-    }
-    .final2 {
-        text-align: center; /* Centra el botón horizontalmente */
-        margin-top:2%; 
-    }
-
-    .submit-btn {
-        padding: 10px 20px; 
-        font-size: 16px; 
-    }
-    .btnmas{
-        height: 80%;
-        width:20%;
-    }
-   
-    .con_final {
-        width: 100%;
-        height: 100%;
-        margin-bottom: 10px;
-        
-    }
-
-    .mensaje{
-        display: none;
-    }
-    .mensaje2{
-        display: flex;
-        width: 100%;
-        height: 30%;
-        margin-top: 5%;
-    }
-    .pregunt_5 {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-       height: 200%;
-    }
-
-    .con_final .pregunt_5 {
-        width: 80%;
-    }
+.contenedor_preguntasformlulario {
+    height: 100%;   
+   margin-left: -8%;
+    width: 100%;
 }
 
 
+.cont_formulario2, .contenedorformulariofinal, .preguntasformulario1, .preguntasformulario2, .preguntasformulario3, .preguntasformulario4 {
+    flex-direction: column;
+    align-items: center;
+}
 
+
+.pregunt_1, .pregunt_2, .pregunt_3, .pregunt_4 {
+    width: 100%;
+    height: 40%;
+    display: block;       
+}
+
+
+.r3 {
+    width: 100%;     
+    height: 50%;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.raya {
+    width: 100%;
+    margin-top: -30%;
+}
+
+.raya hr {
+    width: 100%;
+}
+.contenedorpreguntasfinal {
+    display: block;
+    width: 100%;
+    margin-left: -20%;
+    padding-right: 40%;
+ 
+    
+}
+
+.separacionbotton {
+    height: 10%;
+}
+.contenedorformulariofinal {
+    display: block;
+    width: 100%; 
+    text-align: center;
+    justify-content: center;
+    height: 70%;
+  
+}
+.pregunt_5 {
+    width: 50%;
+}
+
+p {
+    font-size: 110%;
+    font-family: 'Adamina' ;
+}
+.tiposs {
+    width: 100%;
+}
+.con_final, .tipocita, .fechas {
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+}
+
+.tipocita{
+    width: 105%;
+}
+
+.mostrarmenu, .escondermenu {
+    display: block;
+    font-size: 300%;
+    color: #1BC100;
+    margin-top: -4%;
+}
+ 
+.fechas {
+    width: 100%;
+}
+
+
+#hora {
+    background-color: #F7F7F7;
+    border-radius: 6px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    outline: none; 
+    height: 18%;
+    width: 100%;
+    border: 1px solid #EEEEEE;
+}
+.btnmas {
+    height: 80%;
+    width: 20%;
+}
+label {
+    font-size: 80%;
+    font-family: 'Adamina';
+}
+
+#check:checked ~ .contenedor_menu {
+    left: 0;
+}
+.final2 button.submit-btn {
+    width: 100%;
+}
+
+.con_final2 {
+    width: calc(83%);
+    height: calc(90%);
+    margin-left: 35%;
+    width: 70%;
+    margin-top: -50%;
+}
+.con_formulario_final2 {
+    display: block;
+    width: 100%;
+}
+
+#contenedor_citas {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5%;
+    height: 100%;
+  
+}
+
+.submit-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    height: 50%;
+}
+.con_final {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.mensaje {
+    display: none;
+}
+
+.mensaje2 {
+    display: flex;
+    width: 100%;
+    height: 30%;
+   color: black;
+ 
+}
+h2{
+    color: black;
+}
+.pregunt_5 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.con_final .pregunt_5 {
+    width: 80%;
+}
+.escondermenu {
+    background-color: #23DA06; 
+    color: white; 
+    padding: 5px 10px;
+    border: 2px solid white; 
+    border-radius: 50%; 
+    font-size: 150%; 
+    cursor: pointer; 
+}
+   
+    .mostrarmenu {
+        background-color: #23DA06; 
+        color: white; 
+        padding: 3px 15px; 
+       margin-top: -3%;
+        border-radius: 5px;
+        font-size: 150%; 
+        cursor: pointer; 
+    }
+
+    
+    .historiaclinica{
+        width: 100%;
+        height: 100%;   
+        padding-top: 450%;
+    display: none;
+      
+       
+    }
+
+   
+}
 
 input, select, button {
     margin-top: 10px;
     margin-bottom: 10px;
 }
-
