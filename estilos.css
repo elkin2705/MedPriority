@@ -784,7 +784,9 @@ h4{
     font-style: normal;
    font-size: 104%;
 }
-
+.notificaciones{
+    display: none;
+}
 main {
     height: 100%;
     width: 80%;
