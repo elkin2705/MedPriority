@@ -114,6 +114,7 @@ body {
     height: 10%;
 }
 
+
 /*estilos a la opcion difrente del formulario*/
 .opciones_menup {
     height: 15%;
@@ -140,6 +141,9 @@ body {
 /*mas estilos al menu*/
 .con_internosopcionesmenu .opciones_menu:hover {
     background-color: #1BC100;
+    -webkit-transform:scale(0.1);
+    transform:scale(1.05);
+    pointer-events:visiblePainted;
 }
 
 /*div principal de cerrar secion*/
@@ -155,7 +159,7 @@ body {
 /*cerrar secion*/
 .cerrarsecion {
     font-size: 100%;
-    width: 50%;
+    width: 40%;
 
 }
 /*  contenedor de imagen de el icono usuaario */
@@ -517,6 +521,11 @@ h2 {
     transition: background-color 0.3s ease;
     width: 30%;
 }
+.final2 button.submit-btn:hover{
+    -webkit-transform:scale(0.1);
+    transform:scale(1.05);
+    pointer-events:visiblePainted;
+}
 .mensaje {
     display: flex;
     width: 80%;
@@ -604,16 +613,22 @@ main {
  align-items: end;
     
 }
+
 .btnbuscar{
     width: 15%;
     height: 35%;
     background-color: #23DA06;
   margin-left: 5%;
     border: none;
-    border-radius: 15px;
+    border-radius: 10px;
   align-items: end;
   
     
+}
+.btnbuscar:hover{
+    -webkit-transform:scale(0.1);
+    transform:scale(1.05);
+    pointer-events:visiblePainted;
 }
 
 
@@ -739,6 +754,11 @@ h4{
     background-size:  100% 100%;
    
     
+}
+.notificacioness:hover{
+    -webkit-transform:scale(0.1);
+    transform:scale(0.90);
+    pointer-events:visiblePainted;
 }
 .contenedornotificaciones2{
     display: flex;
@@ -1095,3 +1115,4 @@ input, select, button {
     margin-top: 10px;
     margin-bottom: 10px;
 }
+
